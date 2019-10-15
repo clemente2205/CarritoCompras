@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 include 'global/config.php';
 include 'global/conexion.php';
 include 'carrito.php';
