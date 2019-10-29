@@ -5,9 +5,6 @@ include 'global/conexion.php';
 include 'carrito.php';
 include 'templates/cabecera.php';
 ?>
-
-
-
         <br>
         <?php if($mensaje!="") {?>
             <div class="alert alert-success">
