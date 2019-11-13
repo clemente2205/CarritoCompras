@@ -46,7 +46,7 @@ include 'templates/cabecera.php';
                             <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($producto['Nombre'],COD,KEY);?>">
                             <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($producto['Precio'],COD,KEY);?>">
                             
-                            <input  name="cantidad"step="1" data-step-max="10" type="number" id="cantidad" value="<?php echo openssl_encrypt(1,COD,KEY);?>" data-decimals="0" min="0" max="360"/>
+                            <input  name="cantidad"step="1" data-step-max="10" type="number" id="cantidad" value="1" data-decimals="0" min="1" max="360"/>
                         <button 
                         class="btn btn-primary" 
                         name="btnAccion" 
@@ -61,7 +61,7 @@ include 'templates/cabecera.php';
             </div>
             <?php  } ?>            
         </div>
-    </div>
+
     
     
     <script>

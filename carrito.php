@@ -3,6 +3,12 @@ session_start();
 
 $mensaje="";
 
+echo "<pre>";
+var_dump($_POST);
+echo "</pre>";
+
+
+
 if(isset($_POST['btnAccion'])){}
 switch(($_POST['btnAccion'])){
     case 'Agregar':
@@ -15,7 +21,13 @@ switch(($_POST['btnAccion'])){
     }
     $NOMBRE=openssl_decrypt( $_POST['nombre'],COD,KEY );
     $PRECIO=openssl_decrypt( $_POST['precio'],COD,KEY );
-    $CANTIDAD=openssl_decrypt( $_POST['cantidad'],COD,KEY );
+    $CANTIDAD= $_POST['cantidad']; 
+    
+    echo "<pre>";
+    var_dump($_SESSION);
+    echo "</pre>";
+    
+    
     if(!isset($_SESSION['CARRITO']))
     {        
         $producto=array(
